@@ -1,6 +1,16 @@
 import { Component, OnInit, group } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Usuario } from './../models/usuario.model';
+import { UsuarioService } from './../services/usuario/usuario.service';
 
+// Gambiarra pra funcinar SweetAlert
+import { SweetAlert } from 'sweetalert/typings/core';
+import * as _swal from 'sweetalert';
+const swal: SweetAlert = _swal as any;
+
+
+// serve para o carregamento de préloading   <p class="loader__label">Gabriel Velloso</p>
 declare function  init_plugins();
 
 @Component({
@@ -9,12 +19,13 @@ declare function  init_plugins();
   styleUrls: ['./login.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+    usuario: Usuario;
     formulario: FormGroup;
 
-    constructor() { }
-    
-    // função de validação igaus para o formulário
+    constructor(private _usuarioService: UsuarioService,
+                public router: Router    ) { }
+
+    // função de validação igaus para o formulário (senha)
     saoIguais(campo1: string, campo2: string) {
     return(group: FormGroup) => {
         let passo1 = group.controls[campo1].value;
@@ -57,9 +68,23 @@ export class RegisterComponent implements OnInit {
         }
     
         if (!this.formulario.value.condicoes) {
-            console.log('Devem concordar com as condições ');
+            swal('Important !', 'Devem concordar com as condições!', 'warning');
+
             return;
         }
+
+        let usuario = new Usuario(
+            this.formulario.value.nome,
+            this.formulario.value.email,
+            this.formulario.value.password,
+        );
+        
+        this._usuarioService.criarUsuario(usuario)
+            .subscribe(res => {
+                console.log(res);
+                this.router.navigate(['login']);
+            });
+
         console.log(this.formulario.value);
     }
     
