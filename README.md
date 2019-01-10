@@ -13,6 +13,12 @@
 
 
 
-## Seção: 13 - 156 - 159 Login Usário (Front Back)
-* 158 Documentação Google - SignIn API
+## Seção: 13 - 156 - 159 Google Sign In
+* 158 Documentação Google - Google Sign
 * 159 Retornando Token console.
+
+
+## Seção: 13 - 160 - 162 (FIM)
+* 160 Token do google autenticação
+* 161 Protegendo rotas da aplicação (CanActivate)
+* 162 Logout (CanActivate)

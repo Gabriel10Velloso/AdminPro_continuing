@@ -15,14 +15,17 @@ declare const gapi: any;
   styleUrls: ['./login.component.css']
 })
 
-
 export class LoginComponent implements OnInit {
     usuario: Usuario;
     recordame: boolean = false;
     email: string;
     auth2: any;
 
+
+
   constructor( public router: Router, public _usuarioService: UsuarioService ) { }
+
+
 
   ngOnInit() {
     init_plugins();
@@ -35,9 +38,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+
+
 // Google SignIn
 googleInit() {
-
     gapi.load('auth2', () => {
       this.auth2 = gapi.auth2.init({
         client_id: '284936682430-p41gnnqnf9gdcurort95pvikojtcqouu.apps.googleusercontent.com',
@@ -50,15 +54,16 @@ googleInit() {
     });
   }
 
+  
   attachSignin( element ) {
     this.auth2.attachClickHandler( element, {}, (googleUser) => {
         // mensagem do google
-    //   let profile = googleUser.getBasicProfile();
-    //   console.log(profile);
+        //   let profile = googleUser.getBasicProfile();
+        //   console.log(profile);
       let token = googleUser.getAuthResponse().id_token;
-      console.log(token);
-    //   this._usuarioService.loginGoogle( token )
-    //           .subscribe( () => window.location.href = '#/dashboard'  );
+        //   console.log(token);
+      this._usuarioService.loginGoogle( token )
+              .subscribe( () => window.location.href = '#/dashboard'  );
     });
   }
 
