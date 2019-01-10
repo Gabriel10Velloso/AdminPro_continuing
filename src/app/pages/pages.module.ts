@@ -21,6 +21,11 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 
+// Pipe Module
+import { PipesModule } from '../pipes/pipes.module';
+
+
+
 
 
 
@@ -33,7 +38,10 @@ import { PromesasComponent } from './promesas/promesas.component';
         IncrementadorComponent,
         GraficoDonaComponent,
         AccountSettingsComponent,
-        PromesasComponent
+        PromesasComponent,
+
+        
+
     ],
     exports: [
         DashboardComponent,
@@ -42,13 +50,15 @@ import { PromesasComponent } from './promesas/promesas.component';
         IncrementadorComponent,
         GraficoDonaComponent,
         AccountSettingsComponent,
-        PromesasComponent
+        PromesasComponent,
+ 
     ],
     imports: [
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        PipesModule
     ]
 })
 export class PagesModule { }

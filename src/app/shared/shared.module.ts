@@ -7,7 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
-// Services
+
+// Pipes Module
+import { PipesModule } from '../pipes/pipes.module';
+
+
 
 
 @NgModule({
@@ -26,7 +30,8 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     ],
     imports: [
         RouterModule,
-        CommonModule
+        CommonModule,
+        PipesModule
     ],
     providers: [],
 })

@@ -22,3 +22,8 @@
 * 160 Token do google autenticação
 * 161 Protegendo rotas da aplicação (CanActivate)
 * 162 Logout (CanActivate)
+
+## Seção: 14 - 165 - 169
+* 167 Modulo de pipes 
+* 168 Configurando img Pipes
+* 169 Criando os componentes de usuário (img)
