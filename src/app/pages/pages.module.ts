@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PAGES_ROUTES } from './pages.routing';
 import { FormsModule } from '@angular/forms';
 
@@ -23,9 +24,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 
 // Pipe Module
 import { PipesModule } from '../pipes/pipes.module';
-
-
-
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -39,11 +38,11 @@ import { PipesModule } from '../pipes/pipes.module';
         GraficoDonaComponent,
         AccountSettingsComponent,
         PromesasComponent,
-
-        
+        ProfileComponent,
 
     ],
     exports: [
+
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
@@ -51,9 +50,11 @@ import { PipesModule } from '../pipes/pipes.module';
         GraficoDonaComponent,
         AccountSettingsComponent,
         PromesasComponent,
+        ProfileComponent
  
     ],
     imports: [
+        CommonModule,
         SharedModule,
         PAGES_ROUTES,
         FormsModule,

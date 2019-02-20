@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 
 import { ServiceModule } from './services/service.module';
+import { TitleService } from './title.service';
 
 
 
@@ -36,7 +37,7 @@ import { ServiceModule } from './services/service.module';
     PagesModule,
     ServiceModule
   ],
-  providers: [],
+  providers: [Title , TitleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

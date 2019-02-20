@@ -1,0 +1,12 @@
+// https://github.com/angular/angular-cli/issues/889#issuecomment-290112673
+// https://github.com/rars/demo-angularcli-proxy/
+// https://itnext.io/angular-cli-proxy-configuration-4311acec9d6f
+// https://github.com/angular/angular-cli/wiki/stories-proxy
+// {
+//     "/": {
+//       "target": "http://localhost:3000",
+//       "changeOrigin": true,
+//       "secure": false,
+//       "logLevel": "debug"
+//     }
+//   }

@@ -61,13 +61,14 @@ googleInit() {
         //   let profile = googleUser.getBasicProfile();
         //   console.log(profile);
       let token = googleUser.getAuthResponse().id_token;
-        //   console.log(token);
-      this._usuarioService.loginGoogle( token )
-              .subscribe( () => window.location.href = '#/dashboard'  );
-    });
+      console.log(token);
+        this._usuarioService.loginGoogle( token )
+                .subscribe( () => window.location.href = '#/dashboard'  );
+      });
   }
 
 
+//  login convencional
   login(f: NgForm) {
       if (f.invalid) {
         return;

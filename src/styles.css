@@ -1,9 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* ⏩ CARRO OUTROS TIPOS DE TOOLTIPS 
+   https://colorlib.com/polygon/adminty/default/tooltip.html#*/
+/* @import "./assets/css/pages/stylish-tooltip.css"; */
+
 #themecolors a {
     cursor: pointer;
 }
 
 .pointer {
    cursor: pointer; 
+}
+
+.w150 {
+  width: 150px;  
+  margin-bottom:5px; 
 }
