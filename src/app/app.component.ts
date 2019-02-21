@@ -12,12 +12,12 @@ import { TitleService } from './title.service';
 export class AppComponent implements OnInit {
 
   constructor(public _ajustes: SettingsService , 
-              public titleService: Title,
+            //   public titleService: Title,
               private _titleService: TitleService) {}
 
 
     ngOnInit(): void {
-        this._titleService.init();
+        // this._titleService.init();
     }
 
    // Set the Document Title

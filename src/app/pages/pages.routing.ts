@@ -8,6 +8,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
+  // Manutenção Usuário Medico e hospital
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 
@@ -17,12 +19,14 @@ const pagesRoutes: Routes = [
         component: PagesComponent,
         canActivate: [ LoginGuardGuard ],
         children: [
-            { path: 'dashboard', component: DashboardComponent , data: { title: 'Dashboard' } },
-            { path: 'progress', component: ProgressComponent , data: { title: 'Progress Bars' } },
-            { path: 'graficas1', component: Graficas1Component , data: { title: 'Gráficas' } },
-            { path: 'promesas', component: PromesasComponent , data: { title: 'Promessas' } },
-            { path: 'account-settings', component: AccountSettingsComponent , data: { title: 'Ajustes Temas' } },
-            { path: 'profile', component: ProfileComponent ,   data: {title: 'Perfil do usuário'} },
+            { path: 'dashboard', component: DashboardComponent , data: { titulo: 'Dashboard' } },
+            { path: 'progress', component: ProgressComponent , data: { titulo: 'Progress Bars' } },
+            { path: 'graficas1', component: Graficas1Component , data: { titulo: 'Gráficos' } },
+            { path: 'promesas', component: PromesasComponent , data: { titulo: 'Promessas' } },
+            { path: 'account-settings', component: AccountSettingsComponent , data: { titulo: 'Ajustes Temas' } },
+            { path: 'profile', component: ProfileComponent ,   data: {titulo: 'Perfil do usuário'} },
+            // Manutenção Usuário Medico e hospital
+            { path: 'usuarios', component: UsuariosComponent ,   data: {titulo: 'Manutenção usuário'} },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }
