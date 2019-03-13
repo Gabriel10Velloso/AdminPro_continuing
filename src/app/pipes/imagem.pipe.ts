@@ -29,7 +29,7 @@ export class ImagemPipe implements PipeTransform {
           break;
     
           case 'hospital':
-             url += '/hospitales/' + img;
+             url += '/hospitais/' + img;
           break;
     
           default:

@@ -10,6 +10,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
   // Manutenção Usuário Medico e hospital
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { HospitaisComponent } from './hospitais/hospitais.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
 
@@ -27,6 +30,9 @@ const pagesRoutes: Routes = [
             { path: 'profile', component: ProfileComponent ,   data: {titulo: 'Perfil do usuário'} },
             // Manutenção Usuário Medico e hospital
             { path: 'usuarios', component: UsuariosComponent ,   data: {titulo: 'Manutenção usuário'} },
+            { path: 'medicos', component: MedicosComponent ,   data: {titulo: 'Manutenção médicos'} },
+            { path: 'medico/:id', component: MedicoComponent ,   data: {titulo: 'Atualizar médicos'} },
+            { path: 'hospitais', component: HospitaisComponent ,   data: {titulo: 'Manutenção hospitais'} },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }

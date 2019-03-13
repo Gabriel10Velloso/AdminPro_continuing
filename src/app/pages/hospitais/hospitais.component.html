@@ -1,0 +1,72 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+           
+                <input #input2 (keyup)="buscarHospital(input2.value)"
+                      type="text" class="form-control" placeholder="Buscar hospital..." />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-right">
+                
+                    <button (click)="criarHospital()"
+                            type="button" class="btn waves-effect 
+                             waves-light btn-rounded btn-primary">
+                        <i class="fa fa-plus"></i>
+                       Criar Hospiatis
+                    </button>
+                </div>
+
+                <h3 class="card-title">
+                    Hospitais registrados ( <small> {{ _hospitalService.totalHospitais }} </small> )
+                </h3>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Hospital</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                            <tr *ngFor="let hospital of hospitais">
+                            <td>
+                                    <!-- (click)="actualizarImagem(hospital)"  -->
+                                    <!-- {{hospital.nome}} -->
+                                <img   (click)="atualizarImg( hospital )"
+                                      [src]="hospital.img | imagem: 'hospital'"
+                                    class="img-65 pointer" />
+                            </td>
+                            <td>
+                           
+                                <input [(ngModel)]="hospital.nome" 
+                                      name="nome" type="text" class="form-control"
+                                    placeholder="Nome do hospital" />
+                            </td>
+                            <td>
+                                 
+                                <button (click)="atualizarHospital(hospital)"
+                                    class="btn btn-primary">
+                                    <i class="fa fa-save"></i>
+                                </button>
+                        
+                                <button  (click)="apagarHospital(hospital)" class="btn btn-danger">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

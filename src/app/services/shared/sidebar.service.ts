@@ -23,7 +23,7 @@ export class SidebarService {
         {titulo: 'Usuários' , url: '/usuarios'},
         {titulo: 'Hospitais' , url: '/hospitais'},
         {titulo: 'Médicos' , url: '/medicos'},
-
+        // {titulo: 'Médico' , url: '/medico/:id'},
     ]
 
   }

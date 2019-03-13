@@ -81,11 +81,11 @@ export class RegisterComponent implements OnInit {
         
         this._usuarioService.criarUsuario(usuario)
             .subscribe(res => {
-                console.log(res);
+                // console.log(res);
                 this.router.navigate(['login']);
             });
 
-        console.log(this.formulario.value);
+        // console.log(this.formulario.value);
     }
     
 }
