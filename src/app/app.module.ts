@@ -17,6 +17,9 @@ import { RegisterComponent } from './login/register.component';
 import { ServiceModule } from './services/service.module';
 import { TitleService } from './title.service';
 
+import { PagesComponent } from './pages/pages.component';
+import { SharedModule } from './shared/shared.module';
+
 
 
 
@@ -25,6 +28,7 @@ import { TitleService } from './title.service';
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    PagesComponent
     
   ],
   imports: [
@@ -34,8 +38,8 @@ import { TitleService } from './title.service';
     HttpClientModule,
     ReactiveFormsModule,
     APP_ROUTES,
-    PagesModule,
-    ServiceModule
+    ServiceModule,
+    SharedModule
   ],
   providers: [Title , TitleService],
   bootstrap: [AppComponent]

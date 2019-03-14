@@ -10,6 +10,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 // Pipes Module
 import { PipesModule } from '../pipes/pipes.module';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 
 
@@ -20,13 +21,15 @@ import { PipesModule } from '../pipes/pipes.module';
         HeaderComponent,
         SidebarComponent,
         BreadcrumbsComponent,
+        ModalUploadComponent
 
     ],
     exports: [
         NopagefoundComponent,
         HeaderComponent,
         SidebarComponent,
-        BreadcrumbsComponent
+        BreadcrumbsComponent,
+        ModalUploadComponent
     ],
     imports: [
         RouterModule,

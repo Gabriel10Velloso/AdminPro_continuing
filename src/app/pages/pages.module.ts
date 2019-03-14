@@ -35,7 +35,7 @@ import { BuscaGeralComponent } from './busca-geral/busca-geral.component';
 
 @NgModule({
     declarations: [
-        PagesComponent,
+        // PagesComponent,
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
@@ -45,7 +45,7 @@ import { BuscaGeralComponent } from './busca-geral/busca-geral.component';
         PromesasComponent,
         ProfileComponent,
         UsuariosComponent,
-        ModalUploadComponent,
+        // ModalUploadComponent,
         HospitaisComponent,
         MedicosComponent,
         MedicoComponent,
@@ -63,7 +63,7 @@ import { BuscaGeralComponent } from './busca-geral/busca-geral.component';
         PromesasComponent,
         ProfileComponent,
         UsuariosComponent,
-        ModalUploadComponent,
+        // ModalUploadComponent,
         HospitaisComponent,
         MedicosComponent,
         MedicoComponent,

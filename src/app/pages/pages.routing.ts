@@ -19,13 +19,15 @@ import { BuscaGeralComponent } from './busca-geral/busca-geral.component';
 // Guards
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
 import { AdminGuard } from './../services/guards/admin.guard';
+import { VerificaTokenGuard } from '../services/guards/verifica-token.guard';
 
 const pagesRoutes: Routes = [
-    {
-        path: '',
-        component: PagesComponent,
-        canActivate: [ LoginGuardGuard ],
-        children: [
+            {
+                path: 'dashboard',
+                component: DashboardComponent,
+                canActivate: [ VerificaTokenGuard ],
+                data: { titulo: 'Dashboard' }
+            },
             { path: 'dashboard', component: DashboardComponent , data: { titulo: 'Dashboard' } },
             { path: 'progress', component: ProgressComponent , data: { titulo: 'Progress Bars' } },
             { path: 'graficas1', component: Graficas1Component , data: { titulo: 'Gráficos' } },
@@ -44,8 +46,6 @@ const pagesRoutes: Routes = [
             { path: 'medico/:id', component: MedicoComponent ,   data: {titulo: 'Atualizar médicos'} },
             { path: 'hospitais', component: HospitaisComponent ,   data: {titulo: 'Manutenção hospitais'} },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
-        ]
-    }
 ];
 
 
