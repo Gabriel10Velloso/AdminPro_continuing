@@ -14,7 +14,7 @@ const swal: SweetAlert = _swal as any;
 })
 export class HospitaisComponent implements OnInit {
 
-    hospitais: Hospital[];
+    hospitais: Hospital[] =[];
     hospital: Hospital;
     constructor(public _hospitalService: HospitalService,
                 public _modalUploadService: ModalUploadService) { }

@@ -5,13 +5,16 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { SidebarService, SharedService, SettingsService } from './service.index';
+// Deu Pau no service.index.ts não reconhece a pasta por isso importei abaixo 
 import { UsuarioService } from './usuario/usuario.service';
-import { LoginGuardGuard } from './guards/login-guard.guard';
 import { SubindoArquivoService } from './subindo-arquivo/subindo-arquivo.service';
 import { ModalUploadService } from '../components/modal-upload/modal-upload.service';
 import { HospitalService } from './hospital/hospital.service';
 import { MedicoService } from './medico/medico.service';
-// Deu Pau no service.index.ts não reconhece a pasta por isso importei abaixo 
+
+// Admin guard
+import { LoginGuardGuard } from './guards/login-guard.guard';
+import { AdminGuard } from './guards/admin.guard';
 
 @NgModule({
   imports: [
@@ -20,7 +23,7 @@ import { MedicoService } from './medico/medico.service';
     HttpClientModule
   ],
   declarations: [],
-  providers: [ SettingsService, SharedService, SidebarService, UsuarioService, LoginGuardGuard,
+  providers: [ SettingsService, SharedService, SidebarService, UsuarioService, LoginGuardGuard, AdminGuard,
                SubindoArquivoService , ModalUploadService, HospitalService, MedicoService]
 })
 export class ServiceModule { }

@@ -22,4 +22,9 @@ export class HeaderComponent implements OnInit {
   getUsuario() {
       this.usuario = this._usuarioService.usuario;
   }
+
+  buscar( termino: string ) {
+    this.router.navigate(['/busca', termino ]);
+  }
+
 }

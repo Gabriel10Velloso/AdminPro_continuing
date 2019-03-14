@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PAGES_ROUTES } from './pages.routing';
 import { FormsModule } from '@angular/forms';
-
 // ng2-charts
 import { ChartsModule } from 'ng2-charts';
 
@@ -30,6 +29,7 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 import { HospitaisComponent } from './hospitais/hospitais.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { MedicoComponent } from './medicos/medico.component';
+import { BuscaGeralComponent } from './busca-geral/busca-geral.component';
 
 
 
@@ -49,6 +49,7 @@ import { MedicoComponent } from './medicos/medico.component';
         HospitaisComponent,
         MedicosComponent,
         MedicoComponent,
+        BuscaGeralComponent,
 
     ],
     exports: [
@@ -66,6 +67,7 @@ import { MedicoComponent } from './medicos/medico.component';
         HospitaisComponent,
         MedicosComponent,
         MedicoComponent,
+        BuscaGeralComponent,
  
     ],
     imports: [
